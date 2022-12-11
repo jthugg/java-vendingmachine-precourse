@@ -12,10 +12,14 @@ public class MoneyInMachine {
 
 	public MoneyInMachine() {
 		coinData = new HashMap<>();
+		coinData.put(500, 0);
+		coinData.put(100, 0);
+		coinData.put(50, 0);
+		coinData.put(10, 0);
 	}
 
 	public void initCoins(int initMoney) {
-		coinData = Coin.makeCoins(initMoney);
+		coinData = Coin.makeCoins(initMoney, coinData);
 	}
 
 	public List<Integer> getCoins() {
@@ -28,6 +32,8 @@ public class MoneyInMachine {
 	}
 
 	public List<Integer> returnChanges(int deposit, List<Integer> changes) {
+		System.out.println(deposit);
+		System.out.println(coinData);
 		changes.add(check500(deposit));
 		deposit -= check500(deposit);
 		changes.add(check100(deposit));
