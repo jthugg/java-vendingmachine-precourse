@@ -10,4 +10,12 @@ public class Deposit {
 	public int getMoney() {
 		return money;
 	}
+
+	public boolean checkDeposit(int price) {
+		return money < price;
+	}
+
+	public void subtractDeposit(int price) {
+		money -= price;
+	}
 }

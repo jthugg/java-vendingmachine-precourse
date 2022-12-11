@@ -42,10 +42,11 @@ public class MachineController {
 	}
 
 	private boolean checkReturnConditions() {
-		return false;
+		return productData.checkAmounts(deposit.getMoney());
 	}
 
 	private void purchaseProduct() {
+		IOController.printDeposit(deposit.getMoney());
 		String productName = IOController.printRequestProductName();
 		if (checkPurchaseAvailable(productName)) {
 			deposit.subtractDeposit(productData.getPrice(productName));

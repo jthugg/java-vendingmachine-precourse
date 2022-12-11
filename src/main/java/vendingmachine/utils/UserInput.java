@@ -15,4 +15,8 @@ public class UserInput {
 	public static String requestDeposit() {
 		return Console.readLine();
 	}
+
+	public static String requestProductName() {
+		return Console.readLine();
+	}
 }

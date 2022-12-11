@@ -12,18 +12,15 @@ public enum Ui {
 	AMOUNT_10("10원 - "),
 	COUNTER_UNIT("개"),
 	INIT_PRODUCT_DATA("상품명과 가격, 수량을 입력해 주세요."),
-	DEPOSIT("투입 금액을 입력해 주세요.");
+	REQUEST_DEPOSIT("투입 금액을 입력해 주세요."),
+	REQUEST_PRODUCT_NAME("구매할 상품명을 입력해 주세요."),
+	DEPOSIT_MONEY_IS("투입 금액: "),
+	MONEY_UNIT("원");
 
 	private String value;
 
 	Ui(String value) {
 		this.value = value;
-	}
-
-	private int number;
-
-	Ui(int number) {
-		this.number = number;
 	}
 
 	public static void printRequestInitMoney() {
@@ -43,6 +40,14 @@ public enum Ui {
 	}
 
 	public static void printRequestDepositMoney() {
-		System.out.println(DEPOSIT.value);
+		System.out.println(REQUEST_DEPOSIT.value);
+	}
+
+	public static void printDeposit(int money) {
+		System.out.println(DEPOSIT_MONEY_IS.value + money + MONEY_UNIT.value);
+	}
+
+	public static void printRequestProductName() {
+		System.out.println(REQUEST_PRODUCT_NAME.value);
 	}
 }

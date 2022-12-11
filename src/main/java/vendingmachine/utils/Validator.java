@@ -73,4 +73,11 @@ public class Validator {
 	public static int depositMoney(String deposit) {
 		return checkIsNumber(deposit);
 	}
+
+	public static String productName(String name) {
+		if(!Pattern.matches("^[가-힣]*$", name)) {
+			throw new IllegalArgumentException(ErrorMessages.PRODUCT_NAME);
+		}
+		return name;
+	}
 }
