@@ -1,7 +1,11 @@
 package vendingmachine;
 
+import vendingmachine.controllers.MachineController;
+
 public class Application {
-    public static void main(String[] args) {
-        // TODO: 프로그램 구현
-    }
+
+	public static void main(String[] args) {
+		MachineController controller = new MachineController();
+		controller.runMachine();
+	}
 }

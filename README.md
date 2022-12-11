@@ -165,3 +165,18 @@ public enum Coin {
 - **Git의 커밋 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위**로 추가한다.
    - [AngularJS Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 참고해 commit log를 남긴다.
 - 과제 진행 및 제출 방법은 [프리코스 과제 제출 문서](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 를 참고한다.
+
+---
+
+## 기능 목록
+
+- [ ] 입력 받은 숫자로 동전들을 생성한다.
+  - [ ] 입력 요청 메세지 출력
+  - [ ] 입력
+  - [ ] 동전 생성 시퀀스
+  - [ ] 결과 출력
+- [ ] 상품명, 가격, 수량 입력
+  - [ ] 입력 요청 메세지 출력
+  - [ ] 입력
+  - [ ] 상품 생성 시퀀스
+- [ ] 금액 투입, 상품 구매 잔돈 반환 시퀀스
