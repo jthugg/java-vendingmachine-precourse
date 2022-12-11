@@ -1,5 +1,6 @@
 package vendingmachine.controllers;
 
+import java.util.ArrayList;
 import vendingmachine.data.Deposit;
 import vendingmachine.data.MoneyInMachine;
 import vendingmachine.data.ProductData;
@@ -64,6 +65,6 @@ public class MachineController {
 	}
 
 	private void returnChanges() {
-		IOController.printChanges(money.returnChanges(deposit.getDeposit()));
+		IOController.printChanges(money.returnChanges(deposit.getMoney(), new ArrayList<>()));
 	}
 }

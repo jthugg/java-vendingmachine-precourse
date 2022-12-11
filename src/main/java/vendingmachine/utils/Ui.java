@@ -50,4 +50,36 @@ public enum Ui {
 	public static void printRequestProductName() {
 		System.out.println(REQUEST_PRODUCT_NAME.value);
 	}
+
+	public static void printResult(List<Integer> changes) {
+		System.out.println("잔돈");
+		print500(changes.get(0));
+		print100(changes.get(1));
+		print50(changes.get(2));
+		print10(changes.get(3));
+	}
+
+	private static void print500(Integer amount) {
+		if(amount > 0) {
+			System.out.println("500원 - " + amount + "개");
+		}
+	}
+
+	private static void print100(Integer amount) {
+		if(amount > 0) {
+			System.out.println("100원 - " + amount + "개");
+		}
+	}
+
+	private static void print50(Integer amount) {
+		if(amount > 0) {
+			System.out.println("50원 - " + amount + "개");
+		}
+	}
+
+	private static void print10(Integer amount) {
+		if(amount > 0) {
+			System.out.println("10원 - " + amount + "개");
+		}
+	}
 }

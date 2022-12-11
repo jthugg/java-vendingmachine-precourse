@@ -67,4 +67,8 @@ public class IOController {
 	public static void printDeposit(int money) {
 		Ui.printDeposit(money);
 	}
+
+	public static void printChanges(List<Integer> returnChanges) {
+		Ui.printResult(returnChanges);
+	}
 }
