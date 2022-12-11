@@ -12,5 +12,19 @@ public enum Coin {
 		this.amount = amount;
 	}
 
-	// 추가 기능 구현
+	public static Integer get500(int initMoney) {
+		return initMoney / COIN_500.amount;
+	}
+
+	public static Integer get100(int initMoney) {
+		return initMoney / COIN_100.amount;
+	}
+
+	public static Integer get50(int initMoney) {
+		return initMoney / COIN_50.amount;
+	}
+
+	public static Integer get10(int initMoney) {
+		return initMoney / COIN_10.amount;
+	}
 }

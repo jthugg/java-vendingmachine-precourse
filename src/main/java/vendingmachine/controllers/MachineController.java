@@ -21,9 +21,8 @@ public class MachineController {
 	}
 
 	private void initCoins() {
-		IOController.printRequestInitMoney();
 		money.initCoins(IOController.requestInitMoney());
-		IOController.printCoinData();
+		IOController.printCoinData(money.getCoins());
 	}
 
 	private void initProducts() {
