@@ -40,7 +40,7 @@ public class Validator {
 
 	public static Map<String, List<Integer>> InitProduct(String productData) {
 		Map<String, List<Integer>> data = new HashMap<>();
-		for(String eachData : checkPattern(productData)) {
+		for (String eachData : checkPattern(productData)) {
 			eachData = eachData.replace("[", "").replace("]", "");
 			List<String> namePriceAmount = Arrays.asList(eachData.split(","));
 			data.put(namePriceAmount.get(0), getPriceAmount(namePriceAmount.subList(1, 3)));
@@ -50,8 +50,8 @@ public class Validator {
 
 	private static List<String> checkPattern(String productData) {
 		List<String> data = Arrays.asList(productData.split(";"));
-		for(String eachData : data) {
-			if(!Pattern.matches("^\\[[가-힣]*,[0-9]*0,[0-9]*\\]$", eachData)) {
+		for (String eachData : data) {
+			if (!Pattern.matches("^\\[[가-힣]*,[0-9]*0,[0-9]*\\]$", eachData)) {
 				throw new IllegalArgumentException(ErrorMessages.PRODUCT_DATA_REGEX);
 			}
 		}
@@ -60,7 +60,7 @@ public class Validator {
 
 	private static List<Integer> getPriceAmount(List<String> priceAmount) {
 		List<Integer> data = new ArrayList<>();
-		for(String value : priceAmount) {
+		for (String value : priceAmount) {
 			try {
 				data.add(Integer.parseInt(value));
 			} catch (NumberFormatException exception) {
@@ -75,7 +75,7 @@ public class Validator {
 	}
 
 	public static String productName(String name) {
-		if(!Pattern.matches("^[가-힣]*$", name)) {
+		if (!Pattern.matches("^[가-힣]*$", name)) {
 			throw new IllegalArgumentException(ErrorMessages.PRODUCT_NAME);
 		}
 		return name;

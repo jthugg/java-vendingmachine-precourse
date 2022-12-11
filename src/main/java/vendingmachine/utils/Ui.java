@@ -60,25 +60,25 @@ public enum Ui {
 	}
 
 	private static void print500(Integer amount) {
-		if(amount > 0) {
+		if (amount > 0) {
 			System.out.println("500원 - " + amount + "개");
 		}
 	}
 
 	private static void print100(Integer amount) {
-		if(amount > 0) {
+		if (amount > 0) {
 			System.out.println("100원 - " + amount + "개");
 		}
 	}
 
 	private static void print50(Integer amount) {
-		if(amount > 0) {
+		if (amount > 0) {
 			System.out.println("50원 - " + amount + "개");
 		}
 	}
 
 	private static void print10(Integer amount) {
-		if(amount > 0) {
+		if (amount > 0) {
 			System.out.println("10원 - " + amount + "개");
 		}
 	}

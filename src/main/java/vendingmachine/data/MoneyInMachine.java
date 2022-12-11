@@ -1,11 +1,10 @@
 package vendingmachine.data;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import vendingmachine.Coin;
+import vendingmachine.utils.Coin;
 
 public class MoneyInMachine {
 
@@ -43,28 +42,28 @@ public class MoneyInMachine {
 	}
 
 	private Integer check500(int deposit) {
-		if(coinData.get(500) > (deposit / 500)) {
+		if (coinData.get(500) > (deposit / 500)) {
 			return deposit / 500;
 		}
 		return coinData.get(500);
 	}
 
 	private Integer check100(int deposit) {
-		if(coinData.get(100) > (deposit / 100)) {
+		if (coinData.get(100) > (deposit / 100)) {
 			return deposit / 100;
 		}
 		return coinData.get(100);
 	}
 
 	private Integer check50(int deposit) {
-		if(coinData.get(50) > (deposit / 50)) {
+		if (coinData.get(50) > (deposit / 50)) {
 			return deposit / 50;
 		}
 		return coinData.get(50);
 	}
 
 	private Integer check10(int deposit) {
-		if(coinData.get(10) > (deposit / 10)) {
+		if (coinData.get(10) > (deposit / 10)) {
 			return deposit / 10;
 		}
 		return coinData.get(10);
