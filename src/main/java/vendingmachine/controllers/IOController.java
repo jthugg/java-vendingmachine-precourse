@@ -39,4 +39,18 @@ public class IOController {
 			return requestInitProductData();
 		}
 	}
+
+	public static void printRequestDepositMoney() {
+		Ui.printRequestDepositMoney();
+	}
+
+	public static int requestDepositMoney() {
+		try {
+			printRequestDepositMoney();
+			return Validator.depositMoney(UserInput.requestDeposit());
+		} catch (IllegalArgumentException exception) {
+			System.out.println(exception.getMessage());
+			return requestDepositMoney();
+		}
+	}
 }

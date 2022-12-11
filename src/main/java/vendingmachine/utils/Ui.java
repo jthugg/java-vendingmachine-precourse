@@ -11,7 +11,8 @@ public enum Ui {
 	AMOUNT_50("50원 - "),
 	AMOUNT_10("10원 - "),
 	COUNTER_UNIT("개"),
-	INIT_PRODUCT_DATA("상품명과 가격, 수량을 입력해 주세요.");
+	INIT_PRODUCT_DATA("상품명과 가격, 수량을 입력해 주세요."),
+	DEPOSIT("투입 금액을 입력해 주세요.");
 
 	private String value;
 
@@ -39,5 +40,9 @@ public enum Ui {
 
 	public static void printRequestInitProductData() {
 		System.out.println(INIT_PRODUCT_DATA.value);
+	}
+
+	public static void printRequestDepositMoney() {
+		System.out.println(DEPOSIT.value);
 	}
 }

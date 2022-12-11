@@ -11,4 +11,8 @@ public class UserInput {
 	public static String requestInitProductData() {
 		return Console.readLine();
 	}
+
+	public static String requestDeposit() {
+		return Console.readLine();
+	}
 }

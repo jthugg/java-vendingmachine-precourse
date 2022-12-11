@@ -69,4 +69,8 @@ public class Validator {
 		}
 		return data;
 	}
+
+	public static int depositMoney(String deposit) {
+		return checkIsNumber(deposit);
+	}
 }
