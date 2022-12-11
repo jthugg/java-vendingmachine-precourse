@@ -23,7 +23,7 @@ public class IOController {
 	}
 
 	public static void printCoinData(List<Integer> coins) {
-		Ui.printCointData(coins);
+		Ui.printCoinData(coins);
 	}
 
 	public static void printRequestInitProductData() {
