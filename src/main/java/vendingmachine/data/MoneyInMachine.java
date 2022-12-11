@@ -15,10 +15,7 @@ public class MoneyInMachine {
 	}
 
 	public void initCoins(int initMoney) {
-		coinData.put(500, Coin.get500(initMoney));
-		coinData.put(100, Coin.get100(initMoney % 500));
-		coinData.put(50, Coin.get50(initMoney % 100));
-		coinData.put(10, Coin.get10(initMoney % 50));
+		coinData = Coin.makeCoins(initMoney);
 	}
 
 	public List<Integer> getCoins() {

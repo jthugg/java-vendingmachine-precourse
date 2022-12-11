@@ -1,5 +1,10 @@
 package vendingmachine.utils;
 
+import camp.nextstep.edu.missionutils.Randoms;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public enum Coin {
 	COIN_500(500),
 	COIN_100(100),
@@ -12,19 +17,14 @@ public enum Coin {
 		this.amount = amount;
 	}
 
-	public static Integer get500(int initMoney) {
-		return initMoney / COIN_500.amount;
-	}
-
-	public static Integer get100(int initMoney) {
-		return initMoney / COIN_100.amount;
-	}
-
-	public static Integer get50(int initMoney) {
-		return initMoney / COIN_50.amount;
-	}
-
-	public static Integer get10(int initMoney) {
-		return initMoney / COIN_10.amount;
+	public static Map<Integer, Integer> makeCoins(int money) {
+		Map<Integer, Integer> coinBox = new HashMap<>();
+		while (money > 0) {
+			int coinUnit = Randoms.pickNumberInList(
+					Arrays.asList(COIN_500.amount, COIN_100.amount, COIN_50.amount, COIN_10.amount));
+			coinBox.put(coinUnit, money / coinUnit);
+			money %= coinUnit;
+		}
+		return coinBox;
 	}
 }
