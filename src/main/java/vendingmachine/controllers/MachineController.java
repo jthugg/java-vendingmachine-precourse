@@ -26,7 +26,6 @@ public class MachineController {
 	}
 
 	private void initProducts() {
-		IOController.printRequestInitProductData();
 		productData.initData(IOController.requestInitProductData());
 	}
 

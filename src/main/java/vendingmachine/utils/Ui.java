@@ -10,7 +10,8 @@ public enum Ui {
 	AMOUNT_100("100원 - "),
 	AMOUNT_50("50원 - "),
 	AMOUNT_10("10원 - "),
-	COUNTER_UNIT("개");
+	COUNTER_UNIT("개"),
+	INIT_PRODUCT_DATA("상품명과 가격, 수량을 입력해 주세요.");
 
 	private String value;
 
@@ -34,5 +35,9 @@ public enum Ui {
 		System.out.println(AMOUNT_100.value + coins.get(1) + COUNTER_UNIT.value);
 		System.out.println(AMOUNT_50.value + coins.get(2) + COUNTER_UNIT.value);
 		System.out.println(AMOUNT_10.value + coins.get(3) + COUNTER_UNIT.value);
+	}
+
+	public static void printRequestInitProductData() {
+		System.out.println(INIT_PRODUCT_DATA.value);
 	}
 }
