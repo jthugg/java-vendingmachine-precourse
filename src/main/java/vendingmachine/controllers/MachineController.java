@@ -38,7 +38,6 @@ public class MachineController {
 	}
 
 	private void depositMoney() {
-		IOController.printRequestDepositMoney();
 		deposit.setMoney(IOController.requestDepositMoney());
 	}
 
